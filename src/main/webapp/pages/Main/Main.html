@@ -1,10 +1,19 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" backbuttoniconclass="fa fa-chevron-left" leftnavpaneliconclass="fa fa-bars">
-    <wm-button class="btn-transparent" caption="" type="button" name="AddButton" iconclass="glyphicon glyphicon-plus"></wm-button>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-mobile-navbar name="mobile_navbar1" title="Page transitions"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container1" horizontalalign="center" paddingtop="10" paddingleft="010" paddingright="10" paddingbottom="10">
+                <wm-anchor name="anchor1" caption="Flip Page transition" on-click="goToPage_Page"></wm-anchor>
+            </wm-container>
+            <wm-container horizontalalign="center" paddingtop="10" paddingleft="010" paddingright="10" paddingbottom="10" name="container2">
+                <wm-anchor caption="Slide transition" on-click="goToPage_Page1" name="anchor2"></wm-anchor>
+            </wm-container>
+            <wm-container horizontalalign="center" paddingtop="10" paddingleft="010" paddingright="10" paddingbottom="10" name="container3">
+                <wm-anchor caption="Popout transition" on-click="goToPage_Page2" name="anchor3"></wm-anchor>
+            </wm-container>
+            <wm-container horizontalalign="center" paddingtop="10" paddingleft="010" paddingright="10" paddingbottom="10" name="container4">
+                <wm-anchor caption="Fade transition" on-click="goToPage_Page3" name="anchor4"></wm-anchor>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
 </wm-page>
